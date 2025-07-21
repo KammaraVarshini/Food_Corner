@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant Menu</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #d62828;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .menu-section {
+      padding: 2rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #d62828;
+      border-bottom: 2px solid #d62828;
+      display: inline-block;
+	
+    }
+
+    .menu-flex {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
+    }
+
+    .menu-item {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .menu-item:hover {
+      transform: scale(1.03);
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .menu-item-content {
+      padding: 0.8rem;
+    }
+
+    .menu-item h3 {
+      margin: 0 0 0.5rem;
+      color: #333;
+      font-size: 1.1rem;
+    }
+
+    .menu-item p {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0.4rem 0;
+    }
+
+    .price {
+      margin-top: 0.5rem;
+      font-weight: bold;
+      color: #2a9d8f;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f1f1f1;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 1024px) {
+      .menu-flex {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .menu-flex {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .menu-flex {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🍕 The Food Corner</h1>
+    <p>Delicious food served with love</p>
+  </header>
+
+  <!-- Breakfast Section -->
+  <section class="menu-section">
+    <h2 class="section-title">Breakfast</h2>
+    <div class="menu-flex">
+      <div class="menu-item">
+        <img src="pancake.jpg" alt="Pancakes">
+        <div class="menu-item-content">
+          <h3>Fluffy Pancakes</h3>
+          <p>Served with maple syrup and fresh fruits.</p>
+          <div class="price">₹150</div>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="oatmeal.jpg" alt="Oatmeal">
+        <div class="menu-item-content">
+          <h3>Oatmeal Delight</h3>
+          <p>Warm oatmeal topped with dry fruits and honey.</p>
+          <div class="price">₹130</div>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="waffle.jpg" alt="Waffle">
+        <div class="menu-item-content">
+          <h3>Crispy Waffle</h3>
+          <p>Golden waffle with butter and syrup.</p>
+          <div class="price">₹140</div>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="omelette.jpg" alt="Omelette">
+        <div class="menu-item-content">
+          <h3>Cheese Omelette</h3>
+          <p>3-egg omelette with cheese and veggies.</p>
+          <div class="price">₹120</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lunch Section -->
+  <section class="menu-section">
+    <h2 class="section-title">Lunch</h2>
+    <div class="menu-flex">
+      <div class="menu-item">
+        <img src="burger.jpg" alt="Burger">
+        <div class="menu-item-content">
+          <h3>Classic Veg Burger</h3>
+          <p>Grilled patty, fresh lettuce, and tangy sauce.</p>
+          <div class="price">₹180</div>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pasta.jpg" alt="Pasta">
+        <div class="menu-item-content">
+          <h3>Green Pesto Pasta</h3>
+          <p>Fusilli tossed in fresh basil pesto with roasted veggies.</p>
+          <div class="price">₹180</div>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="panner.jpg" alt="Paneer">
+        <div class="menu-item-content">
+          <h3>Grilled Paneer Platter</h3>
+          <p>Served with brown rice, sautéed greens, and yogurt dip.</p>
+          <div class="price">₹180</div>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="biryani2.jpg" alt="Biryani">
+        <div class="menu-item-content">
+          <h3>Hyderabadi Biryani</h3>
+          <p>Spicy and flavorful basmati rice with paneer.</p>
+          <div class="price">₹250</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dessert Section -->
+  <section class="menu-section">
+    <h2 class="section-title">Desserts</h2>
+    <div class="menu-flex">
+      <div class="menu-item">
+        <img src="dessert.jpg" alt="Cake">
+        <div class="menu-item-content">
+          <h3>Chocolate Lava Cake</h3>
+          <p>Warm cake with a molten chocolate center.</p>
+          <div class="price">₹100</div>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="tropical fruit Sundae.jpg" alt="Tropical Fruit Sundae">
+        <div class="menu-item-content">
+          <h3>Tropical Fruit Sundae</h3>
+          <p>Mixed fruits layered with ice cream, jelly, and whipped cream.</p>
+          <div class="price">₹150</div>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="blueberry crumble pie.jpg" alt="Blueberry Crumble Pie">
+        <div class="menu-item-content">
+          <h3>Blueberry Crumble Pie</h3>
+          <p>Sweet-tart blueberry compote and crumb topping.</p>
+          <div class="price">₹300</div>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="icecream.jpg" alt="Ice Cream">
+        <div class="menu-item-content">
+          <h3>Vanilla Ice Cream</h3>
+          <p>Creamy vanilla ice cream with nuts topping.</p>
+          <div class="price">₹90</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 The Food Corner. All rights reserved.
+  </footer>
+
+</body>
+</html>
